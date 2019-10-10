@@ -14,13 +14,13 @@ public class GreetingController {
     @CrossOrigin(origins = "*")
     @RequestMapping(value="/test", method = RequestMethod.GET)
     public @ResponseBody Iterable<TestString> testget() {
+        // Return all the records we find within the database (probably not ideal for production)
         return testStringRepository.findAll();
     }
 
     @CrossOrigin(origins = "*")
     @RequestMapping(value="/test", method = RequestMethod.POST)
     public void testpost(@RequestBody TestString tStr) {
-
         // Save our tStr to the database
         TestString s = new TestString(tStr.getStr());
         testStringRepository.save(s);
