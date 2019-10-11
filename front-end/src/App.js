@@ -10,9 +10,11 @@ function App() {
 
   const getText = async () => {
     if (!text){
-    const textdata = await axios.get(TEXTURL);
-    setText(textdata.data[textdata.data.length-1].str)
-    }else{setText("")}
+      const textdata = await axios.get(TEXTURL);
+      setText(textdata.data[textdata.data.length-1].str)
+    }else{
+      setText("")
+    }
   }
 
   const sendText = async (event) => {
