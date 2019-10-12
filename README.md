@@ -1,4 +1,4 @@
-# mysql-react-reactjs-example
+# postgreSQL-react-reactjs-example
 A little example of the tech stack we might be using
 
 
